@@ -1,4 +1,5 @@
 import 'package:client/routes/app_routes.dart';
+import 'package:client/theme/app_themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,9 +15,9 @@ class MyApp extends StatelessWidget {
       routerConfig: AppRoute.router,
       debugShowCheckedModeBanner: false,
       title: 'StudyUp App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppThemes.lightTheme,
+      darkTheme: AppThemes.darkTheme,
+      themeMode: ThemeMode.light,
     );
   }
 }

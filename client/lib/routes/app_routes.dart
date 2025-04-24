@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../core/constants/constants.dart';
 import '../features/authentication/presentation/screens/login_screen.dart';
 import '../features/authentication/presentation/screens/register_screen.dart';
 import '../features/home/presentation/screens/pages/home_page.dart';
@@ -10,27 +11,27 @@ class AppRoute {
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(
-        path: '/',
+        path: AppRoutes.root,
         builder: (context, state) => const LoginScreen(),
       ),
       GoRoute(
-        path: '/login',
+        path: AppRoutes.login,
         builder: (context, state) => const LoginScreen(),
       ),
       GoRoute(
-        path: '/register',
+        path: AppRoutes.register,
         builder: (context, state) => const RegisterScreen(),
       ),
       GoRoute(
-        path: '/home',
+        path: AppRoutes.home,
         builder: (context, state) => const HomePage(),
       ),
       GoRoute(
-        path: '/subject',
+        path: AppRoutes.subject,
         builder: (context, state) => const SubjectScreen(),
       ),
       GoRoute(
-        path: '/schedule',
+        path: AppRoutes.schedule,
         builder: (context, state) => const ScheduleScreen(),
       ),
     ],
